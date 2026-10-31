@@ -8,3 +8,5 @@
 *.crx
 *.pem
 Cached Theme.pak
+__pycache__/
+*.pyc
