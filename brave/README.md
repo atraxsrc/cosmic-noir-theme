@@ -36,12 +36,12 @@ active tab text takes orange.
 
 | Hex       | Where in the theme                               |
 |-----------|--------------------------------------------------|
-| `#171717` | Frame, inactive tabs, new tab page (incognito too) |
-| `#222222` | Toolbar and active tab                           |
-| `#3A3B3A` | Address bar                                      |
-| `#CCD0CF` | Bookmark bar text, address bar text, new tab text |
-| `#88A57D` | Toolbar icons, inactive tab text                 |
-| `#F25623` | Active tab text, new tab links                   |
+| ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` | Frame, inactive tabs, new tab page (incognito too) |
+| ![#222222](https://placehold.co/12x12/222222/222222.png) `#222222` | Toolbar and active tab                           |
+| ![#3A3B3A](https://placehold.co/12x12/3a3b3a/3a3b3a.png) `#3A3B3A` | Address bar                                      |
+| ![#CCD0CF](https://placehold.co/12x12/ccd0cf/ccd0cf.png) `#CCD0CF` | Bookmark bar text, address bar text, new tab text |
+| ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | Toolbar icons, inactive tab text                 |
+| ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` | Active tab text, new tab links                   |
 
 Every text colour clears WCAG AA (4.5:1) on its background; the lowest is
 the orange active tab text at 4.64:1.

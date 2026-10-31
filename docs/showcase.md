@@ -8,19 +8,19 @@ describing itself, written in Markdown and rendered by **Postilla**.
 
 ## Palette
 
-Every text colour is checked against the window background `#171717`.
+Every text colour is checked against the window background ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717`.
 
 | Role | Hex | Contrast on background |
 |------|-----|------------------------|
-| Text | `#CCD0CF` | 11.5:1 |
-| Orange, accent | `#F25623` | 5.2:1 |
-| Ember, warning | `#F56E0F` | 6.1:1 |
-| Sage, success | `#88A57D` | 6.6:1 |
-| Khaki, symlinks | `#AEAB94` | 7.7:1 |
-| Grey-sage, directories | `#959C95` | 6.4:1 |
-| Muted | `#7D837D` | 4.6:1 |
+| Text | ![#CCD0CF](https://placehold.co/12x12/ccd0cf/ccd0cf.png) `#CCD0CF` | 11.5:1 |
+| Orange, accent | ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` | 5.2:1 |
+| Ember, warning | ![#F56E0F](https://placehold.co/12x12/f56e0f/f56e0f.png) `#F56E0F` | 6.1:1 |
+| Sage, success | ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | 6.6:1 |
+| Khaki, symlinks | ![#AEAB94](https://placehold.co/12x12/aeab94/aeab94.png) `#AEAB94` | 7.7:1 |
+| Grey-sage, directories | ![#959C95](https://placehold.co/12x12/959c95/959c95.png) `#959C95` | 6.4:1 |
+| Muted | ![#7D837D](https://placehold.co/12x12/7d837d/7d837d.png) `#7D837D` | 4.6:1 |
 
-Containers sit one step away from the background at `#222222`, which is
+Containers sit one step away from the background at ![#222222](https://placehold.co/12x12/222222/222222.png) `#222222`, which is
 what frosted glass blurs into.
 
 ## Where the colours go

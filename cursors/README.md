@@ -6,11 +6,11 @@ rice's icon colours: one per folder colour of the
 [Cosmic-Noir](https://github.com/atraxsrc/cosmic-icon-themes) icon pack, **Orange**, **Sage**, **Dark**.
 All patched so they work in COSMIC's own apps.
 
-| Variant | Preview | Body | Contrast on `#171717` | Goes with |
+| Variant | Preview | Body | Contrast on ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` | Goes with |
 | ------- | ------- | ---- | ------------------- | --------- |
-| **Orange** (default) | ![](../assets/cursors/Oxygen-Noir-Orange.png) | `#FF5F1F` neon | 5.9:1 | Orange folders |
-| **Sage** | ![](../assets/cursors/Oxygen-Noir-Sage.png) | `#88A57D` | 6.6:1 | Sage folders |
-| **Dark** | ![](../assets/cursors/Oxygen-Noir-Dark.png) | `#2A2A2A` | 1.2:1 | Dark folders |
+| **Orange** (default) | ![](../assets/cursors/Oxygen-Noir-Orange.png) | ![#FF5F1F](https://placehold.co/12x12/ff5f1f/ff5f1f.png) `#FF5F1F` neon | 5.9:1 | Orange folders |
+| **Sage** | ![](../assets/cursors/Oxygen-Noir-Sage.png) | ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | 6.6:1 | Sage folders |
+| **Dark** | ![](../assets/cursors/Oxygen-Noir-Dark.png) | ![#2A2A2A](https://placehold.co/12x12/2a2a2a/2a2a2a.png) `#2A2A2A` | 1.2:1 | Dark folders |
 
 Each variant is a normal folder here (`Oxygen-Noir-<Variant>/index.theme` + `cursors/`),
 already fixed for COSMIC. Nothing is downloaded at install time.
@@ -30,10 +30,10 @@ Any coloured variant works as the base. To add a colour:
 then add `Teal` to `VARIANTS` in `install.sh` and `uninstall.sh`.
 
 Orange is the fluorescent one. The Oxygen shading runs 0.18 above and below the
-target lightness, which turns the Pop!_OS orange `#F25623` rust at the rim and salmon
-on top. Orange uses neon `#FF5F1F` with the shading held to 0.11 and the highlight
-turned 6 degrees towards yellow, so the rim is `#E64200`, the body `#FF6316` and the
-gloss `#FF9857`, all fully saturated:
+target lightness, which turns the Pop!_OS orange ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` rust at the rim and salmon
+on top. Orange uses neon ![#FF5F1F](https://placehold.co/12x12/ff5f1f/ff5f1f.png) `#FF5F1F` with the shading held to 0.11 and the highlight
+turned 6 degrees towards yellow, so the rim is ![#E64200](https://placehold.co/12x12/e64200/e64200.png) `#E64200`, the body ![#FF6316](https://placehold.co/12x12/ff6316/ff6316.png) `#FF6316` and the
+gloss ![#FF9857](https://placehold.co/12x12/ff9857/ff9857.png) `#FF9857`, all fully saturated:
 
 ```bash
 ./cursors/recolour.py --base cursors/Oxygen-Noir-Sage \
@@ -42,7 +42,7 @@ gloss `#FF9857`, all fully saturated:
   --preview assets/cursors/Oxygen-Noir-Orange.png --bg '#171717'
 ```
 
-For the plain `#F25623` instead, pass that colour with `--spread 0.11` and no `--glow`.
+For the plain ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` instead, pass that colour with `--spread 0.11` and no `--glow`.
 
 ## Install
 

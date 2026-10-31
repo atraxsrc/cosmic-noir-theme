@@ -72,7 +72,7 @@ and background pairs the theme sets.
 Where a Neovim colour falls short, it is darkened (light theme) or lightened
 (dark theme) just far enough here:
 
-- **Dossier**: imports, macros, decorators and escapes `#DE6A41` → `#8C4329`; secondary text (status bar, titles, descriptions) `#59574D` → `#555349`; the accent `#953B19` → `#8E3818`; strings `#51573B` → `#50563A`; warnings and modified files `#754E3E` → `#654335`; added files and success marks `#51573B` → `#484D35`.
+- **Dossier**: imports, macros, decorators and escapes ![#DE6A41](https://placehold.co/12x12/de6a41/de6a41.png) `#DE6A41` → ![#8C4329](https://placehold.co/12x12/8c4329/8c4329.png) `#8C4329`; secondary text (status bar, titles, descriptions) ![#59574D](https://placehold.co/12x12/59574d/59574d.png) `#59574D` → ![#555349](https://placehold.co/12x12/555349/555349.png) `#555349`; the accent ![#953B19](https://placehold.co/12x12/953b19/953b19.png) `#953B19` → ![#8E3818](https://placehold.co/12x12/8e3818/8e3818.png) `#8E3818`; strings ![#51573B](https://placehold.co/12x12/51573b/51573b.png) `#51573B` → ![#50563A](https://placehold.co/12x12/50563a/50563a.png) `#50563A`; warnings and modified files ![#754E3E](https://placehold.co/12x12/754e3e/754e3e.png) `#754E3E` → ![#654335](https://placehold.co/12x12/654335/654335.png) `#654335`; added files and success marks ![#51573B](https://placehold.co/12x12/51573b/51573b.png) `#51573B` → ![#484D35](https://placehold.co/12x12/484d35/484d35.png) `#484D35`.
 
 On the highlighted current line, code can dip slightly under 4.5:1 and
 comments under 3:1.

@@ -9,15 +9,15 @@ Stylesheets:
 
 | Hex       | Role                      |
 |-----------|---------------------------|
-| `#171717` | Frame, page chrome, text on orange |
-| `#222222` | Panels, menus             |
-| `#412A22` | Menu hover row (orange tinted into the panel) |
-| `#502D22` | Menu pressed row          |
-| `#3A3B3A` | Separators, menu border   |
-| `#F25623` | Accent, URL bar border, hover rail |
-| `#88A57D` | Menu text, new tab accent, active |
-| `#959C95` | Links                     |
-| `#DADEDD` | Hover text                |
+| ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` | Frame, page chrome, text on orange |
+| ![#222222](https://placehold.co/12x12/222222/222222.png) `#222222` | Panels, menus             |
+| ![#412A22](https://placehold.co/12x12/412a22/412a22.png) `#412A22` | Menu hover row (orange tinted into the panel) |
+| ![#502D22](https://placehold.co/12x12/502d22/502d22.png) `#502D22` | Menu pressed row          |
+| ![#3A3B3A](https://placehold.co/12x12/3a3b3a/3a3b3a.png) `#3A3B3A` | Separators, menu border   |
+| ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` | Accent, URL bar border, hover rail |
+| ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | Menu text, new tab accent, active |
+| ![#959C95](https://placehold.co/12x12/959c95/959c95.png) `#959C95` | Links                     |
+| ![#DADEDD](https://placehold.co/12x12/dadedd/dadedd.png) `#DADEDD` | Hover text                |
 
 ## Structure
 
@@ -55,13 +55,13 @@ line clear 3:1.
 
 | Hex       | Where in the theme                          |
 |-----------|---------------------------------------------|
-| `#171717` | Frame, new tab, text on orange selections   |
-| `#222222` | Toolbar, menus                              |
-| `#3A3B3A` | URL bar field, button hover, sidebar border |
-| `#CCD0CF` | Body text                                   |
-| `#959C95` | Menu border                                 |
-| `#88A57D` | Icons, inactive tab text                    |
-| `#F25623` | Focused tab text, focused URL bar ring and text selection, tab line, pressed button, menu and sidebar selection, loading, attention |
+| ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` | Frame, new tab, text on orange selections   |
+| ![#222222](https://placehold.co/12x12/222222/222222.png) `#222222` | Toolbar, menus                              |
+| ![#3A3B3A](https://placehold.co/12x12/3a3b3a/3a3b3a.png) `#3A3B3A` | URL bar field, button hover, sidebar border |
+| ![#CCD0CF](https://placehold.co/12x12/ccd0cf/ccd0cf.png) `#CCD0CF` | Body text                                   |
+| ![#959C95](https://placehold.co/12x12/959c95/959c95.png) `#959C95` | Menu border                                 |
+| ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | Icons, inactive tab text                    |
+| ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` | Focused tab text, focused URL bar ring and text selection, tab line, pressed button, menu and sidebar selection, loading, attention |
 
 Build the package:
 
@@ -107,7 +107,7 @@ To undo: delete the two files from the profile's `chrome/` folder and restart.
 - **Never set `--panel-*` or `--arrowpanel-*` on `:root`.** Those variables leak
   into the toolbar and blank the URL bar. They stay on the popup elements.
 - **Context menus do not get an extra element border.** A second stroke made
-  the right-click panel look detached. Hover is an orange-tinted `#412A22`
+  the right-click panel look detached. Hover is an orange-tinted ![#412A22](https://placehold.co/12x12/412a22/412a22.png) `#412A22`
   row with a 3px orange rail on the left, not a full ring.
 - **Native menu styling is switched off** (`appearance: none`) on menus and
   menu rows. Without it the COSMIC/GTK hover paints over the colours above.

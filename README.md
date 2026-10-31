@@ -25,27 +25,27 @@ kept as is. Every text colour is at least 4.5:1 on the window background.
 
 | Role | Color | Hex |
 |------|-------|-----|
-| Background | ![#171717](https://placehold.co/12x12/171717/171717.png) Charcoal | `#171717` |
-| Containers | ![#222222](https://placehold.co/12x12/222222/222222.png) Soot / Slate | `#222222` / `#2A2A2A` |
-| Text | ![#ccd0cf](https://placehold.co/12x12/ccd0cf/ccd0cf.png) Fog | `#CCD0CF` |
-| Accent | ![#f25623](https://placehold.co/12x12/f25623/f25623.png) Orange | `#F25623` |
-| Warning | ![#f56e0f](https://placehold.co/12x12/f56e0f/f56e0f.png) Ember | `#F56E0F` |
-| Success | ![#88a57d](https://placehold.co/12x12/88a57d/88a57d.png) Sage | `#88A57D` |
-| Khaki | ![#aeab94](https://placehold.co/12x12/aeab94/aeab94.png) Symlinks, yellow slot | `#AEAB94` |
-| Grey-sage | ![#959c95](https://placehold.co/12x12/959c95/959c95.png) Directories | `#959C95` |
-| Muted | ![#7d837d](https://placehold.co/12x12/7d837d/7d837d.png) Secondary text | `#7D837D` |
-| Dim | ![#686c69](https://placehold.co/12x12/686c69/686c69.png) Comments | `#686C69` |
-| Lines | ![#525252](https://placehold.co/12x12/525252/525252.png) Box lines, inactive | `#525252` |
+| Background | ![#171717](https://placehold.co/12x12/171717/171717.png) Charcoal | ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` |
+| Containers | ![#222222](https://placehold.co/12x12/222222/222222.png) Soot / Slate | ![#222222](https://placehold.co/12x12/222222/222222.png) `#222222` / ![#2A2A2A](https://placehold.co/12x12/2a2a2a/2a2a2a.png) `#2A2A2A` |
+| Text | ![#ccd0cf](https://placehold.co/12x12/ccd0cf/ccd0cf.png) Fog | ![#CCD0CF](https://placehold.co/12x12/ccd0cf/ccd0cf.png) `#CCD0CF` |
+| Accent | ![#f25623](https://placehold.co/12x12/f25623/f25623.png) Orange | ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` |
+| Warning | ![#f56e0f](https://placehold.co/12x12/f56e0f/f56e0f.png) Ember | ![#F56E0F](https://placehold.co/12x12/f56e0f/f56e0f.png) `#F56E0F` |
+| Success | ![#88a57d](https://placehold.co/12x12/88a57d/88a57d.png) Sage | ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` |
+| Khaki | ![#aeab94](https://placehold.co/12x12/aeab94/aeab94.png) Symlinks, yellow slot | ![#AEAB94](https://placehold.co/12x12/aeab94/aeab94.png) `#AEAB94` |
+| Grey-sage | ![#959c95](https://placehold.co/12x12/959c95/959c95.png) Directories | ![#959C95](https://placehold.co/12x12/959c95/959c95.png) `#959C95` |
+| Muted | ![#7d837d](https://placehold.co/12x12/7d837d/7d837d.png) Secondary text | ![#7D837D](https://placehold.co/12x12/7d837d/7d837d.png) `#7D837D` |
+| Dim | ![#686c69](https://placehold.co/12x12/686c69/686c69.png) Comments | ![#686C69](https://placehold.co/12x12/686c69/686c69.png) `#686C69` |
+| Lines | ![#525252](https://placehold.co/12x12/525252/525252.png) Box lines, inactive | ![#525252](https://placehold.co/12x12/525252/525252.png) `#525252` |
 
 Error shares the orange: the upstream palette has no red, and its "red" slot
 is khaki. Errors are told apart by bold and underline.
 
 | Role | Noir | Dossier |
 |------|------|---------|
-| Background | `#171717` | `#D0D0C8` |
-| Text | `#CCD0CF` | `#242424` |
-| Accent | `#F25623` | `#953B19` |
-| Success | `#88A57D` | `#51573B` |
+| Background | ![#171717](https://placehold.co/12x12/171717/171717.png) `#171717` | ![#D0D0C8](https://placehold.co/12x12/d0d0c8/d0d0c8.png) `#D0D0C8` |
+| Text | ![#CCD0CF](https://placehold.co/12x12/ccd0cf/ccd0cf.png) `#CCD0CF` | ![#242424](https://placehold.co/12x12/242424/242424.png) `#242424` |
+| Accent | ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` | ![#953B19](https://placehold.co/12x12/953b19/953b19.png) `#953B19` |
+| Success | ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` | ![#51573B](https://placehold.co/12x12/51573b/51573b.png) `#51573B` |
 
 ---
 
@@ -126,7 +126,7 @@ is khaki. Errors are told apart by bold and underline.
 
 Settings → Desktop → Appearance → **Dark** → **Import** → `cosmic/Noir.ron`
 
-Accent is orange `#F25623`. Use the `+` control if you want a custom swatch.
+Accent is orange ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623`. Use the `+` control if you want a custom swatch.
 
 Frosted glass is on in the `.ron` at `frosted: Low` with an opacity table of
 0.66 to 0.96, tinted with the palette's middle neutral, for windows, panel,
@@ -166,7 +166,7 @@ It backs up each file it replaces to `*.bak` and COSMIC applies it live.
 
 The interface font is the Light weight on purpose. COSMIC sets interface text
 brightness itself (the text tint only picks the hue), so on these dark panels
-labels land near `#DFE7DF` whatever tint you choose; the thinner strokes are
+labels land near ![#DFE7DF](https://placehold.co/12x12/dfe7df/dfe7df.png) `#DFE7DF` whatever tint you choose; the thinner strokes are
 what calms them at night. Settings → Fonts lists only families, so the weight
 lives in `cosmic/config/com.system76.CosmicTk/v1/interface_font`.
 
@@ -187,7 +187,7 @@ Fog text on charcoal; orange for errors and the cursor, sage for strings and
 success, khaki in the yellow slot, grey-sage for directories.
 
 If fog glares at night, there are five dimmer variants with the same ANSI
-colours, from Smoke `#7D837D` up to Pale `#BCBFBC`. Previews and which to
+colours, from Smoke ![#7D837D](https://placehold.co/12x12/7d837d/7d837d.png) `#7D837D` up to Pale ![#BCBFBC](https://placehold.co/12x12/bcbfbc/bcbfbc.png) `#BCBFBC`. Previews and which to
 pick: [`cosmic-term/README.md`](cosmic-term/README.md).
 
 ---
@@ -422,7 +422,7 @@ cp btop/Noir.theme ~/.config/btop/themes/
 Icons: **Cosmic-Noir**, the [Kanagawa icons](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme/tree/main/icons/Kanagawa)
 by Fausto Korpsvart recolored to this palette in
 [cosmic-icon-themes](https://github.com/atraxsrc/cosmic-icon-themes). Folders come in
-three colors: **Orange** `#F25623` (default), **Sage** `#88A57D` and **Dark** `#2A2A2A` with orange symbols.
+three colors: **Orange** ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` (default), **Sage** ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` and **Dark** ![#2A2A2A](https://placehold.co/12x12/2a2a2a/2a2a2a.png) `#2A2A2A` with orange symbols.
 
 ![Cosmic-Noir folder colors](https://raw.githubusercontent.com/atraxsrc/cosmic-icon-themes/main/previews/Cosmic-Noir.png)
 
