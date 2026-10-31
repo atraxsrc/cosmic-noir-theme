@@ -2,6 +2,8 @@
 
 # COSMIC · Noir
 
+![Noir palette](assets/palette.png)
+
 Pop!_OS 24.04 on COSMIC in charcoal, sage and orange: desktop, terminal,
 shell, Firefox, Brave, cursor, wallpapers. The dark half of a pair; the light half is
 [cosmic-dossier-theme](https://github.com/atraxsrc/cosmic-dossier-theme).
@@ -111,6 +113,7 @@ is khaki. Errors are told apart by bold and underline.
 ├── assets
 │   ├── cursors/                 # cursor preview
 │   ├── cosmic-term/             # scheme previews for cosmic-term/README.md
+│   ├── palette.png              # the 16 terminal colours, under the title
 │   ├── screenshot.png           # README screenshot
 │   └── wallpaper.png            # the anime portrait on the bare desktop
 ├── backgrounds/                 # wallpapers, noir-<subject>.png (see Icons and wallpaper)
