@@ -21,8 +21,7 @@ shell, Firefox, Brave, cursor, wallpapers. The dark half of a pair; the light ha
 
 ## Palette
 
-From the Omarchy [Greek Noir](https://github.com/HANCORE-linux/omarchy-greek-noir-theme)
-theme: a near-black base, grey-sage neutrals, one loud orange. The accent is
+From the Greek Noir palette: a near-black base, grey-sage neutrals, one loud orange. The accent is
 kept as is. Every text colour is at least 4.5:1 on the window background.
 
 | Role | Color | Hex |
@@ -446,10 +445,7 @@ the Harbor Dark reaper and Hyundai blueprint, the COSMIC astronaut, the samurai,
 sushi switch, geisha, JS mug and neon street from the Tokyo Night set, The Greek
 eagle and ink portrait, and three new scenes: city, panel and tower.
 The anime portrait (`noir-anime.png`) is the one in the screenshot.
-The subjects come from [HANCORE-linux](https://github.com/HANCORE-linux) (MIT) and
-[cool-wallpapers](https://github.com/atraxsrc/cool-wallpapers); each was rendered again in this palette, then upscaled.
-More from the upstream theme in cool-wallpapers, folder
-[`omarchy/greek-noir/`](https://github.com/atraxsrc/cool-wallpapers/tree/main/omarchy/greek-noir) (MIT).
+The subjects come from [cool-wallpapers](https://github.com/atraxsrc/cool-wallpapers) (MIT); each was rendered again in this palette, then upscaled.
 
 Settings → Wallpaper → Add image → a file from `backgrounds/`, or one you downloaded.
 
@@ -575,9 +571,8 @@ puts the Pop cursor back.
 
 ## Credits
 
-- Palette and wallpapers: [omarchy-greek-noir-theme](https://github.com/HANCORE-linux/omarchy-greek-noir-theme)
-  by HANCORE-linux (MIT). This repo is a COSMIC port; the upstream wallpapers
-  are mirrored in cool-wallpapers, the renders for this palette are in `backgrounds/`.
+- Palette and wallpapers: Greek Noir (MIT). This repo is a COSMIC port; the
+  renders for this palette are in `backgrounds/`.
 - Light half: [cosmic-dossier-theme](https://github.com/atraxsrc/cosmic-dossier-theme).
   Shared baseline (frosted glass, squared corners, fonts) from
   [cosmic-darkgold-theme](https://github.com/atraxsrc/cosmic-darkgold-theme).
