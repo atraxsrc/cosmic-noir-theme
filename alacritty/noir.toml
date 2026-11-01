@@ -1,0 +1,80 @@
+# Noir for Alacritty, part of cosmic-noir-theme (MIT).
+# Colours follow the COSMIC Terminal scheme (cosmic-term/Noir-term.ron).
+#
+# Install: ./alacritty/install.sh puts this in ~/.config/alacritty/themes/,
+# then in ~/.config/alacritty/alacritty.toml:
+#   [general]
+#   import = ["~/.config/alacritty/themes/noir.toml"]
+# (Alacritty 0.13: a top-level `import = [...]` line instead.)
+
+[colors.primary]
+background = "#171717"
+foreground = "#CCD0CF"
+bright_foreground = "#DADEDD"
+dim_foreground = "#7D837D"
+
+[colors.cursor]
+text = "#171717"
+cursor = "#F25623"
+
+[colors.vi_mode_cursor]
+text = "#171717"
+cursor = "#F56E0F"
+
+[colors.selection]
+text = "CellForeground"
+background = "#3A3B3A"
+
+[colors.search.matches]
+foreground = "#171717"
+background = "#AEAB94"
+
+[colors.search.focused_match]
+foreground = "#171717"
+background = "#F25623"
+
+[colors.hints.start]
+foreground = "#171717"
+background = "#F56E0F"
+
+[colors.hints.end]
+foreground = "#171717"
+background = "#AEAB94"
+
+[colors.footer_bar]
+foreground = "#CCD0CF"
+background = "#222222"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.normal]
+black   = "#101010"
+red     = "#F25623"
+green   = "#88A57D"
+yellow  = "#AEAB94"
+blue    = "#F56E0F"
+magenta = "#F56E0F"
+cyan    = "#7B837B"
+white   = "#BCBFBC"
+
+[colors.bright]
+black   = "#525252"
+red     = "#F56E0F"
+green   = "#A3BC98"
+yellow  = "#C9C6B2"
+blue    = "#F56E0F"
+magenta = "#F0913A"
+cyan    = "#959C95"
+white   = "#DADEDD"
+
+[colors.dim]
+black   = "#171717"
+red     = "#B8431F"
+green   = "#6E8565"
+yellow  = "#8E8B78"
+blue    = "#B85A1A"
+magenta = "#B85A1A"
+cyan    = "#5E635E"
+white   = "#959C95"

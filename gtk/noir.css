@@ -1,0 +1,88 @@
+/* Noir for GTK 3 and GTK 4 / libadwaita apps, part of cosmic-noir-theme (MIT).
+ * Only the named colours: charcoal windows, soot cards, popovers and
+ * dialogs, fog text, orange accent and selection with charcoal text on it,
+ * sage success, ember warning. Widgets keep the stock Adwaita shapes.
+ *
+ * Install: ./gtk/install.sh copies this to ~/.config/gtk-3.0/ and
+ * ~/.config/gtk-4.0/ and imports it from gtk.css there. COSMIC's own
+ * "apply theme to GNOME apps" import stays; this one comes after it. */
+
+/* libadwaita / GTK 4 */
+@define-color accent_bg_color #F25623;
+@define-color accent_fg_color #171717;
+@define-color accent_color #F25623;
+@define-color destructive_bg_color #F25623;
+@define-color destructive_fg_color #171717;
+@define-color destructive_color #F25623;
+@define-color success_bg_color #88A57D;
+@define-color success_fg_color #171717;
+@define-color success_color #88A57D;
+@define-color warning_bg_color #F56E0F;
+@define-color warning_fg_color #171717;
+@define-color warning_color #F56E0F;
+@define-color error_bg_color #F25623;
+@define-color error_fg_color #171717;
+@define-color error_color #F25623;
+
+@define-color window_bg_color #171717;
+@define-color window_fg_color #CCD0CF;
+@define-color view_bg_color #171717;
+@define-color view_fg_color #CCD0CF;
+@define-color headerbar_bg_color #171717;
+@define-color headerbar_fg_color #CCD0CF;
+@define-color headerbar_border_color #525252;
+@define-color headerbar_backdrop_color #171717;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.9);
+@define-color sidebar_bg_color #171717;
+@define-color sidebar_fg_color #CCD0CF;
+@define-color sidebar_backdrop_color #171717;
+@define-color sidebar_border_color #525252;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.36);
+@define-color secondary_sidebar_bg_color #222222;
+@define-color secondary_sidebar_fg_color #CCD0CF;
+@define-color secondary_sidebar_backdrop_color #222222;
+@define-color secondary_sidebar_border_color #525252;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.36);
+@define-color card_bg_color #222222;
+@define-color card_fg_color #CCD0CF;
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+@define-color dialog_bg_color #222222;
+@define-color dialog_fg_color #CCD0CF;
+@define-color popover_bg_color #222222;
+@define-color popover_fg_color #CCD0CF;
+@define-color popover_shade_color rgba(0, 0, 0, 0.36);
+@define-color thumbnail_bg_color #222222;
+@define-color thumbnail_fg_color #CCD0CF;
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
+
+/* GTK 3 */
+@define-color theme_bg_color #171717;
+@define-color theme_fg_color #CCD0CF;
+@define-color theme_base_color #171717;
+@define-color theme_text_color #CCD0CF;
+@define-color theme_selected_bg_color #F25623;
+@define-color theme_selected_fg_color #171717;
+@define-color theme_unfocused_bg_color #171717;
+@define-color theme_unfocused_fg_color #959C95;
+@define-color theme_unfocused_base_color #171717;
+@define-color theme_unfocused_text_color #959C95;
+@define-color theme_unfocused_selected_bg_color #2A2A2A;
+@define-color theme_unfocused_selected_fg_color #CCD0CF;
+@define-color insensitive_bg_color #222222;
+@define-color insensitive_fg_color #686C69;
+@define-color insensitive_base_color #171717;
+@define-color borders #525252;
+@define-color unfocused_borders #3A3B3A;
+@define-color content_view_bg #171717;
+@define-color placeholder_text_color #7D837D;
+@define-color wm_title #CCD0CF;
+@define-color wm_unfocused_title #959C95;
+@define-color wm_bg #171717;
+@define-color wm_border #525252;
+@define-color wm_unfocused_border #3A3B3A;
+
+/* links share the accent, as in Firefox and Cursor */
+@define-color link_color #F25623;
+@define-color visited_link_color #F56E0F;

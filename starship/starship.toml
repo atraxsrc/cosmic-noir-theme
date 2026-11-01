@@ -1,0 +1,75 @@
+"$schema" = "https://starship.rs/config-schema.json"
+# Noir starship prompt, part of cosmic-noir-theme (MIT).
+# Close to the defaults, coloured from the palette: grey-sage directory, khaki
+# branch, ember for a dirty tree, sage prompt character (orange after an
+# error), HH:MM clock on the right. Modules without a style here keep their
+# defaults, which use the ANSI slots the COSMIC Terminal scheme already
+# colours.
+
+format = "$all"
+right_format = "$time"
+palette = "noir"
+
+[palettes.noir]
+orange = "#F25623"
+ember = "#F56E0F"
+sage = "#88A57D"
+khaki = "#AEAB94"
+grey = "#959C95"
+muted = "#7D837D"
+dim = "#686C69"
+fg = "#CCD0CF"
+
+[character]
+success_symbol = "[❯](bold sage)"
+error_symbol = "[❯](bold orange)"
+vimcmd_symbol = "[❮](bold khaki)"
+
+[directory]
+style = "bold grey"
+read_only_style = "orange"
+repo_root_style = "bold khaki"
+
+[git_branch]
+style = "bold khaki"
+
+[git_commit]
+style = "bold khaki"
+
+[git_state]
+style = "bold ember"
+
+[git_status]
+style = "ember"
+
+[git_metrics]
+added_style = "sage"
+deleted_style = "orange"
+
+[username]
+style_user = "sage"
+style_root = "bold orange"
+
+[hostname]
+style = "sage"
+
+[cmd_duration]
+style = "muted"
+
+[status]
+style = "bold orange"
+
+[sudo]
+style = "bold ember"
+
+[jobs]
+style = "ember"
+
+[dart]
+disabled = true
+
+[time]
+disabled = false
+time_format = "%H:%M"
+format = "[$time]($style)"
+style = "dim"

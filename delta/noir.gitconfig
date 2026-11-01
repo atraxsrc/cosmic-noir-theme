@@ -1,0 +1,55 @@
+# Noir for delta (the git diff pager), part of cosmic-noir-theme (MIT).
+# Removed lines in orange, added lines in sage, both on the soot container,
+# changed words on a solid orange / sage block with charcoal text (the same
+# as DiffAdd / DiffDelete / DiffText in Neovim). Code inside the diff uses
+# the bat Noir theme, so run ./bat/install.sh first.
+#
+# Install: ./delta/install.sh puts this in ~/.config/delta/, then add to
+# ~/.gitconfig (the installer prints this, it never edits ~/.gitconfig):
+#   [include]
+#       path = ~/.config/delta/noir.gitconfig
+# and, if delta is not your pager yet:
+#   [core]
+#       pager = delta
+#   [interactive]
+#       diffFilter = delta --color-only
+
+[delta]
+    features = noir
+
+[delta "noir"]
+    dark = true
+    syntax-theme = Noir
+    navigate = true
+    line-numbers = true
+
+    file-style = bold "#F25623"
+    file-decoration-style = "#525252" ul
+    hunk-header-style = file line-number syntax
+    hunk-header-decoration-style = "#525252" box
+    hunk-header-file-style = "#959C95"
+    hunk-header-line-number-style = "#AEAB94"
+
+    minus-style = "#F25623" "#222222"
+    minus-emph-style = bold "#171717" "#F25623"
+    minus-non-emph-style = "#F25623" "#222222"
+    plus-style = "#88A57D" "#222222"
+    plus-emph-style = bold "#171717" "#88A57D"
+    plus-non-emph-style = "#88A57D" "#222222"
+    zero-style = syntax
+    whitespace-error-style = "#171717" "#F56E0F"
+
+    line-numbers-left-style = "#525252"
+    line-numbers-right-style = "#525252"
+    line-numbers-minus-style = "#F25623"
+    line-numbers-plus-style = "#88A57D"
+    line-numbers-zero-style = "#686C69"
+
+    commit-style = bold "#AEAB94"
+    commit-decoration-style = "#525252" box
+    blame-palette = "#171717 #222222 #2A2A2A"
+    blame-code-style = syntax
+    merge-conflict-begin-symbol = ▼
+    merge-conflict-end-symbol = ▲
+    merge-conflict-ours-diff-header-style = bold "#88A57D"
+    merge-conflict-theirs-diff-header-style = bold "#F56E0F"

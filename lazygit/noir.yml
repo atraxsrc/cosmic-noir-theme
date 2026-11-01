@@ -1,0 +1,37 @@
+# Noir for lazygit, part of cosmic-noir-theme (MIT). Only the colours: your
+# own ~/.config/lazygit/config.yml keeps the rest.
+#
+# Install: ./lazygit/install.sh puts this in ~/.config/lazygit/noir.yml and
+# zsh/noir.zsh sets LG_CONFIG_FILE to "config.yml,noir.yml" so lazygit
+# reads both (the later file wins). Without the zsh layer:
+#   export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/noir.yml"
+gui:
+  theme:
+    activeBorderColor:
+      - "#F25623"
+      - bold
+    inactiveBorderColor:
+      - "#525252"
+    searchingActiveBorderColor:
+      - "#F56E0F"
+      - bold
+    optionsTextColor:
+      - "#959C95"
+    selectedLineBgColor:
+      - "#2A2A2A"
+    inactiveViewSelectedLineBgColor:
+      - "#222222"
+    cherryPickedCommitFgColor:
+      - "#171717"
+    cherryPickedCommitBgColor:
+      - "#AEAB94"
+    markedBaseCommitFgColor:
+      - "#171717"
+    markedBaseCommitBgColor:
+      - "#88A57D"
+    unstagedChangesColor:
+      - "#F25623"
+    defaultFgColor:
+      - "#CCD0CF"
+  authorColors:
+    "*": "#AEAB94"

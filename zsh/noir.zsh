@@ -65,6 +65,17 @@ fi
 
 (( $+commands[cosmic-edit] )) && alias edit='cosmic-edit'
 
+# lazygit reads one config file; stack the rice colours (lazygit/noir.yml,
+# installed by ./lazygit/install.sh) on top of your own config.yml
+if (( $+commands[lazygit] )); then
+    _noir_lg="${XDG_CONFIG_HOME:-$HOME/.config}/lazygit"
+    if [[ -f $_noir_lg/noir.yml ]]; then
+        export LG_CONFIG_FILE="$_noir_lg/noir.yml"
+        [[ -f $_noir_lg/config.yml ]] && LG_CONFIG_FILE="$_noir_lg/config.yml,$LG_CONFIG_FILE"
+    fi
+    unset _noir_lg
+fi
+
 if (( $+commands[nvim] )); then
     alias vi='nvim'
     alias vim='nvim'

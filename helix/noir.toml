@@ -1,0 +1,144 @@
+# Noir for Helix, part of cosmic-noir-theme (MIT).
+# Syntax roles follow nvim/colors/noir.lua: orange keywords, sage strings,
+# khaki functions, ember numbers, grey-sage types, amber imports and escapes.
+#
+# Install: ./helix/install.sh puts this in ~/.config/helix/themes/, then in
+# ~/.config/helix/config.toml:
+#   theme = "noir"
+
+# syntax
+"attribute" = "spec"
+"comment" = { fg = "cmt", modifiers = ["italic"] }
+"constant" = "num"
+"constant.character" = "str"
+"constant.character.escape" = "spec"
+"constant.numeric" = "num"
+"constant.builtin" = "num"
+"constructor" = "fn"
+"function" = "fn"
+"function.builtin" = "fn"
+"function.macro" = "spec"
+"function.method" = "fn"
+"keyword" = "kw"
+"keyword.control.import" = "spec"
+"keyword.directive" = "spec"
+"keyword.operator" = "kw"
+"label" = "kw"
+"namespace" = "typ"
+"operator" = "op"
+"punctuation" = "op"
+"punctuation.special" = "spec"
+"special" = "spec"
+"string" = "str"
+"string.regexp" = "spec"
+"string.special" = "spec"
+"tag" = "kw"
+"tag.attribute" = "fn"
+"type" = "typ"
+"type.builtin" = { fg = "typ", modifiers = ["bold"] }
+"type.enum.variant" = "num"
+"variable" = "fg"
+"variable.builtin" = "spec"
+"variable.other.member" = "fg"
+"variable.parameter" = { fg = "muted", modifiers = ["italic"] }
+
+# markup
+"markup.heading" = { fg = "accent", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "accent", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "fn", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "typ", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "link", underline = { style = "line" } }
+"markup.link.text" = "link"
+"markup.link.label" = "link"
+"markup.quote" = { fg = "muted", modifiers = ["italic"] }
+"markup.raw" = "str"
+"markup.list" = "op"
+"markup.list.checked" = "success"
+"markup.list.unchecked" = "dim"
+
+# diagnostics and diff
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.info" = { underline = { color = "typ", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "muted", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+"error" = "error"
+"warning" = "warning"
+"info" = "typ"
+"hint" = "muted"
+"diff.plus" = "success"
+"diff.minus" = "error"
+"diff.delta" = "warning"
+
+# editor chrome
+"ui.background" = { bg = "bg" }
+"ui.text" = "fg"
+"ui.text.focus" = { fg = "fg", bg = "bg2" }
+"ui.text.inactive" = "dim"
+"ui.text.info" = "fg"
+"ui.cursor" = { fg = "bg", bg = "accent" }
+"ui.cursor.primary" = { fg = "bg", bg = "accent" }
+"ui.cursor.match" = { fg = "accent", modifiers = ["bold", "underlined"] }
+"ui.cursor.insert" = { fg = "bg", bg = "success" }
+"ui.cursor.select" = { fg = "bg", bg = "khaki" }
+"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursorcolumn.primary" = { bg = "bg1" }
+"ui.selection" = { bg = "bg2" }
+"ui.selection.primary" = { bg = "sel" }
+"ui.highlight" = { bg = "bg2" }
+"ui.linenr" = "dim"
+"ui.linenr.selected" = { fg = "accent", modifiers = ["bold"] }
+"ui.gutter" = { bg = "bg" }
+"ui.statusline" = { fg = "secondary", bg = "bg1" }
+"ui.statusline.inactive" = { fg = "dim", bg = "bg1" }
+"ui.statusline.normal" = { fg = "bg", bg = "accent", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg", bg = "success", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "bg", bg = "khaki", modifiers = ["bold"] }
+"ui.bufferline" = { fg = "secondary", bg = "bg1" }
+"ui.bufferline.active" = { fg = "accent", bg = "bg", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "bg1" }
+"ui.popup" = { fg = "fg", bg = "bg1" }
+"ui.popup.info" = { fg = "fg", bg = "bg1" }
+"ui.window" = "lines"
+"ui.help" = { fg = "fg", bg = "bg1" }
+"ui.menu" = { fg = "fg", bg = "bg1" }
+"ui.menu.selected" = { fg = "fg", bg = "bg2" }
+"ui.menu.scroll" = { fg = "lines", bg = "bg1" }
+"ui.virtual" = "dim"
+"ui.virtual.ruler" = { bg = "bg1" }
+"ui.virtual.whitespace" = "bg2"
+"ui.virtual.indent-guide" = "bg2"
+"ui.virtual.inlay-hint" = { fg = "dim", bg = "bg1", modifiers = ["italic"] }
+"ui.virtual.jump-label" = { fg = "bg", bg = "error", modifiers = ["bold"] }
+"ui.debug.breakpoint" = "error"
+"ui.debug.active" = "warning"
+"ui.picker.header" = { fg = "accent", modifiers = ["bold"] }
+
+[palette]
+bg = "#171717"
+bg1 = "#222222"
+bg2 = "#2A2A2A"
+sel = "#3A3B3A"
+lines = "#525252"
+fg = "#CCD0CF"
+muted = "#A6ADA6"
+secondary = "#959C95"
+dim = "#686C69"
+accent = "#F25623"
+success = "#88A57D"
+warning = "#F56E0F"
+error = "#F25623"
+khaki = "#AEAB94"
+kw = "#F25623"
+fn = "#AEAB94"
+str = "#88A57D"
+num = "#F56E0F"
+typ = "#959C95"
+op = "#7D837D"
+cmt = "#686C69"
+spec = "#F0913A"
+link = "#959C95"

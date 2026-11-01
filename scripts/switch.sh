@@ -79,8 +79,8 @@ if [ "$MODE" = dark ]; then is_dark=true; else is_dark=false; fi
 echo "$is_dark" > "$C/cosmic/com.system76.CosmicTheme.Mode/v1/is_dark"
 echo "  cosmic: $MODE mode"
 
-# Terminal tools; bat and starship only exist in some repos
-for tool in fastfetch lsd bat starship; do
+# Terminal tools, editors, GTK / Qt, Discord; each only where the repo has it
+for tool in fastfetch lsd bat starship kitty alacritty wezterm ghostty delta lazygit helix gtk qt discord; do
     if [ -x "$tool/install.sh" ]; then "./$tool/install.sh" | sed "/^$/d; s/^/  $tool: /"; fi
 done
 mkdir -p "$C/btop/themes" && cp "btop/$BTOP.theme" "$C/btop/themes/"
@@ -144,4 +144,11 @@ for tg in telegram/*.tdesktop-theme; do
 done
 if [[ -f brave/theme/manifest.json ]]; then
   echo "  Brave (optional): brave://extensions → Developer mode → Load unpacked → $R/brave/theme"
+fi
+if [[ -x obsidian/install.sh ]]; then
+  echo "  Obsidian (optional): ./obsidian/install.sh <vault>, then Settings → Appearance → CSS snippets"
+fi
+if [[ -x helix/install.sh ]] || [[ -x kitty/install.sh ]]; then
+  echo "  Terminals and editors: the installers above only copy theme files; see the README for"
+  echo "  the one include line each of kitty, Alacritty, WezTerm, Ghostty, Helix, delta and qt6ct needs"
 fi
