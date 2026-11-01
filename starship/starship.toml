@@ -7,7 +7,7 @@
 # colours.
 
 format = "$all"
-right_format = "$time"
+# right_format = "$time"
 palette = "noir"
 
 [palettes.noir]
