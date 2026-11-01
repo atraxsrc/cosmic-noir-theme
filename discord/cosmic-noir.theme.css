@@ -1,7 +1,7 @@
 /**
  * @name Cosmic Noir
  * @author atraxsrc
- * @description Noir (dark) / Dossier (light), the COSMIC rice pair. Charcoal, soot, fog and orange at night; stone, paper, ink and rust by day.
+ * @description Noir (dark) / Dossier (light), the COSMIC rice pair.
  * @version 1.0.0
  * @source https://github.com/atraxsrc/cosmic-noir-theme
  */
@@ -110,7 +110,7 @@
   --button-positive-background: #88A57D;
   --button-positive-background-hover: #A3BC98;
   --button-danger-background: #F25623;
-  --button-danger-background-hover: #F56E0F;
+  --button-danger-background-hover: #F25623;
   --button-secondary-background: #2A2A2A;
   --button-secondary-background-hover: #3A3B3A;
   --button-secondary-background-active: #525252;
@@ -134,16 +134,16 @@
   --background-primary: #D0D0C8;
   --background-secondary: #DCDCD4;
   --background-secondary-alt: #E4E4DC;
-  --background-tertiary: #C7C7C0;
-  --background-accent: #BBBBB4;
+  --background-tertiary: #BBBBB4;
+  --background-accent: #E4E4DC;
   --background-floating: #DCDCD4;
   --background-mobile-primary: #D0D0C8;
   --background-mobile-secondary: #DCDCD4;
-  --background-modifier-hover: #C7C7C099;
-  --background-modifier-active: #BBBBB4;
-  --background-modifier-selected: #BBBBB4;
+  --background-modifier-hover: #DCDCD499;
+  --background-modifier-active: #E4E4DC;
+  --background-modifier-selected: #E4E4DC;
   --background-modifier-accent: #ACACA6;
-  --background-message-hover: #C7C7C080;
+  --background-message-hover: #DCDCD480;
   --background-mentioned: #953B1920;
   --background-mentioned-hover: #953B1930;
   --channeltextarea-background: #DCDCD4;
@@ -154,43 +154,44 @@
   --modal-footer-background: #DCDCD4;
   --activity-card-background: #DCDCD4;
 
+  /* 2025 layout names */
   --bg-base-primary: #D0D0C8;
   --bg-base-secondary: #DCDCD4;
-  --bg-base-tertiary: #C7C7C0;
+  --bg-base-tertiary: #BBBBB4;
   --bg-surface-raised: #DCDCD4;
   --bg-surface-overlay: #E4E4DC;
-  --bg-mod-faint: #C7C7C066;
-  --bg-mod-subtle: #BBBBB499;
+  --bg-mod-faint: #DCDCD466;
+  --bg-mod-subtle: #E4E4DC99;
   --bg-mod-strong: #ACACA6;
   --background-base-low: #D0D0C8;
-  --background-base-lower: #C7C7C0;
-  --background-base-lowest: #C7C7C0;
+  --background-base-lower: #BBBBB4;
+  --background-base-lowest: #BBBBB4;
   --background-surface-high: #DCDCD4;
   --background-surface-higher: #E4E4DC;
-  --background-surface-highest: #E4E4DC;
+  --background-surface-highest: #ACACA6;
   --border-subtle: #ACACA6;
-  --border-normal: #6C6C64;
+  --border-normal: #ACACA6;
   --border-strong: #59574D;
-  --border-faint: #BBBBB4;
+  --border-faint: #E4E4DC;
 
   --text-normal: #242424;
-  --text-muted: #59574D;
-  --text-link: #953B19;
+  --text-muted: #555349;
+  --text-link: #8E3818;
   --text-link-low-saturation: #8E3818;
   --text-positive: #51573B;
   --text-warning: #754E3E;
   --text-danger: #A80026;
-  --text-brand: #953B19;
+  --text-brand: #8E3818;
   --header-primary: #242424;
-  --header-secondary: #59574D;
-  --interactive-normal: #59574D;
+  --header-secondary: #555349;
+  --interactive-normal: #555349;
   --interactive-hover: #242424;
   --interactive-active: #151515;
   --interactive-muted: #6B7360;
-  --channels-default: #59574D;
+  --channels-default: #555349;
   --text-default: #242424;
-  --text-secondary: #59574D;
-  --text-tertiary: #6B7360;
+  --text-secondary: #555349;
+  --text-tertiary: #59574D;
   --text-strong: #151515;
   --text-feedback-positive: #51573B;
   --text-feedback-warning: #754E3E;
@@ -198,14 +199,14 @@
   --text-primary: #242424;
 
   --brand-500: #953B19;
-  --brand-560: #8E3818;
-  --brand-600: #8E3818;
+  --brand-560: #953B19;
+  --brand-600: #DB0030;
   --brand-experiment: #953B19;
-  --brand-experiment-560: #8E3818;
-  --brand-experiment-600: #8E3818;
-  --control-brand-foreground: #953B19;
-  --control-brand-foreground-new: #953B19;
-  --mention-foreground: #953B19;
+  --brand-experiment-560: #953B19;
+  --brand-experiment-600: #DB0030;
+  --control-brand-foreground: #8E3818;
+  --control-brand-foreground-new: #8E3818;
+  --mention-foreground: #8E3818;
   --mention-background: #953B1920;
   --status-positive: #51573B;
   --status-positive-background: #51573B;
@@ -220,14 +221,14 @@
   --info-warning-foreground: #754E3E;
   --info-danger-foreground: #A80026;
   --button-positive-background: #51573B;
-  --button-positive-background-hover: #2E3125;
+  --button-positive-background-hover: #51573B;
   --button-danger-background: #A80026;
-  --button-danger-background-hover: #DB0030;
-  --button-secondary-background: #BBBBB4;
+  --button-danger-background-hover: #A80026;
+  --button-secondary-background: #E4E4DC;
   --button-secondary-background-hover: #ACACA6;
-  --button-secondary-background-active: #A0A09A;
+  --button-secondary-background-active: #ACACA6;
   --button-outline-brand-border: #953B19;
-  --button-outline-brand-text: #953B19;
+  --button-outline-brand-text: #8E3818;
 
   --scrollbar-auto-thumb: #ACACA6;
   --scrollbar-auto-track: #D0D0C8;
@@ -236,7 +237,7 @@
   --scrollbar-auto-scrollbar-color-thumb: #ACACA6;
   --scrollbar-auto-scrollbar-color-track: #D0D0C8;
   --focus-primary: #953B19;
-  --spoiler-background: #BBBBB4;
+  --spoiler-background: #E4E4DC;
   --spoiler-hover-background: #ACACA6;
   --text-code: #51573B;
 }
