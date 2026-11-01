@@ -1,0 +1,6 @@
+name = "Noir"
+mode = "dark"
+theme = "Noir.ron"
+pair = "dossier"
+terminal = "Noir-term.ron"
+btop = "Noir"
