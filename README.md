@@ -131,7 +131,7 @@ is khaki. Errors are told apart by bold and underline.
 │   ├── Noir.conf                # qt5ct / qt6ct colour scheme
 │   └── install.sh
 ├── starship
-│   ├── starship.toml            # prompt, palette colours, clock on the right
+│   ├── starship.toml            # prompt, palette colours
 │   └── install.sh
 ├── telegram
 │   ├── colors.tdesktop-theme    # Telegram Desktop colour scheme (source)
@@ -502,7 +502,7 @@ kitty and Alacritty have no such switch; include the other file instead.
 `starship/starship.toml` is close to the defaults with the palette declared
 once as `[palettes.noir]` and used by name: grey-sage directory, khaki branch,
 ember for a dirty tree, sage prompt character that turns orange after a
-failed command, a dim `HH:MM` clock on the right. Modules it does not style
+failed command. Modules it does not style
 keep their defaults, which use the ANSI slots the COSMIC Terminal scheme
 colours. `zsh/noir.zsh` already runs `starship init`. `install.sh` backs up
 any existing `~/.config/starship.toml` to `starship.toml.bak`.

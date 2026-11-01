@@ -2,12 +2,11 @@
 # Noir starship prompt, part of cosmic-noir-theme (MIT).
 # Close to the defaults, coloured from the palette: grey-sage directory, khaki
 # branch, ember for a dirty tree, sage prompt character (orange after an
-# error), HH:MM clock on the right. Modules without a style here keep their
+# error). Modules without a style here keep their
 # defaults, which use the ANSI slots the COSMIC Terminal scheme already
 # colours.
 
 format = "$all"
-# right_format = "$time"
 palette = "noir"
 
 [palettes.noir]
@@ -69,7 +68,7 @@ style = "ember"
 disabled = true
 
 [time]
-disabled = false
+disabled = true
 time_format = "%H:%M"
 format = "[$time]($style)"
 style = "dim"
