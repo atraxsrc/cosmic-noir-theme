@@ -13,6 +13,7 @@ wallpapers. The dark half of a pair; the light half is
 ![COSMIC](https://img.shields.io/badge/COSMIC-1.0.0-88a57d?style=for-the-badge)
 ![Noir](https://img.shields.io/badge/Theme-Noir-171717?style=for-the-badge&labelColor=f25623)
 ![Firefox](https://img.shields.io/badge/Firefox-Noir-f25623?style=for-the-badge&logo=firefox-browser&logoColor=white)
+[![Gallery](https://img.shields.io/badge/Gallery-All_rices-f25623?style=for-the-badge)](https://atraxsrc.github.io/cosmic-rices/)
 ![License](https://img.shields.io/badge/License-MIT-7d837d?style=for-the-badge)
 
 </div>
