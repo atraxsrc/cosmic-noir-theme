@@ -10,7 +10,7 @@ for app in Vencord vesktop; do
     mkdir -p "$dest"
     [ -f "$dest/cosmic-noir.theme.css" ] && cp "$dest/cosmic-noir.theme.css" "$dest/cosmic-noir.theme.css.bak"
     cp "$dir/cosmic-noir.theme.css" "$dest/"
-    echo "  $app: themes/cosmic-noir.theme.css"
+    echo "  $app: $dest/cosmic-noir.theme.css"
     installed=1
 done
 if [ "$installed" = 0 ]; then
