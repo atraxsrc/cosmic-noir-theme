@@ -123,6 +123,8 @@ is khaki. Errors are told apart by bold and underline.
 │   ├── config.yaml              # theme: custom
 │   ├── colors.yaml              # permission / size / date / git columns
 │   └── install.sh
+├── notesnook
+│   └── cosmic-noir.json         # Notesnook theme, Noir (dark)
 ├── nvim                         # Neovim colorscheme, LazyVim spec, RON syntax, install.sh
 ├── obsidian
 │   ├── cosmic-noir.css          # CSS snippet, Noir (dark) + Dossier (light)
@@ -398,6 +400,22 @@ checkboxes, khaki tags. The same file ships in cosmic-dossier-theme.
 
 It copies the file into the vault's `.obsidian/snippets/`. Snippets are per
 vault, so run it once per vault.
+
+---
+
+## Notesnook
+
+`notesnook/cosmic-noir.json` is a [Notesnook](https://notesnook.com/) theme for Noir,
+built from the same palette as the Obsidian snippet: window, list and sidebar
+backgrounds, text, accent, selection and the error / success colours. A
+Notesnook theme holds one colour scheme, so the Dossier half ships as
+`notesnook/cosmic-dossier.json` in cosmic-dossier-theme; load both if you switch between
+dark and light.
+
+```text
+Notesnook → Settings → Appearance → Themes → Load from file
+→ pick notesnook/cosmic-noir.json → Set as default
+```
 
 ---
 
