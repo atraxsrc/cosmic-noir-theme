@@ -80,7 +80,7 @@ echo "$is_dark" > "$C/cosmic/com.system76.CosmicTheme.Mode/v1/is_dark"
 echo "  cosmic: $MODE mode"
 
 # Terminal tools, editors, GTK / Qt, Discord; each only where the repo has it
-for tool in fastfetch lsd bat starship kitty alacritty wezterm ghostty delta lazygit helix gtk qt discord; do
+for tool in fonts fastfetch lsd bat starship kitty alacritty wezterm ghostty delta lazygit helix gtk qt discord; do
     if [ -x "$tool/install.sh" ]; then "./$tool/install.sh" | sed "/^$/d; s/^/  $tool: /"; fi
 done
 mkdir -p "$C/btop/themes" && cp "btop/$BTOP.theme" "$C/btop/themes/"

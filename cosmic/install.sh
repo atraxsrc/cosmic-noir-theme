@@ -18,6 +18,6 @@ done
 
 cat <<'EOF'
 
-Done. Needs the Maple fonts and Cosmic-Noir icons (./icons/install.sh) installed, and the Noir
+Done. Needs the fonts (./fonts/install.sh) and Cosmic-Noir icons (./icons/install.sh) installed, and the Noir
 terminal scheme imported, or COSMIC falls back to its defaults.
 EOF

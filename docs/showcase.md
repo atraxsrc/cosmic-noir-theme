@@ -52,12 +52,12 @@ corner_radii: (
     radius_xs: (2.0, 2.0, 2.0, 2.0),   // squared corners
     radius_xl: (2.0, 2.0, 2.0, 2.0),
 ),
-frosted: VeryLow,
+frosted: Low,
 frosted_windows: true,
 frosted_panel: true,
 frosted_applets: true,
 frosted_maximized_apps: false,
-gaps: (0, 7),
+gaps: (0, 4),
 active_hint: 1,
 ```
 
