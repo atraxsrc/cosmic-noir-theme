@@ -207,7 +207,7 @@ per-rice files.
 | Where | Setting |
 |-------|---------|
 | Fonts | Interface `Maple Mono Normal` Light, monospace `Maple Mono Normal NFM` |
-| Icons | Cosmic-Noir-Orange |
+| Icons | Cosmic-Noir-Dark |
 | Windows | Minimize / maximize buttons hidden, theme applied to GNOME apps |
 | Terminal | Maple Mono 15 (weights 500 / bold 800 / dim 300), 77% opacity, no header bar, Noir |
 
@@ -686,13 +686,13 @@ cp btop/Noir.theme ~/.config/btop/themes/
 Icons: **Cosmic-Noir**, the [Kanagawa icons](https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme/tree/main/icons/Kanagawa)
 by Fausto Korpsvart recolored to this palette in
 [cosmic-icon-themes](https://github.com/atraxsrc/cosmic-icon-themes). Folders come in
-three colors: **Orange** ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623` (default), **Sage** ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` and **Dark** ![#2A2A2A](https://placehold.co/12x12/2a2a2a/2a2a2a.png) `#2A2A2A` with orange symbols.
+three colors: **Orange** ![#F25623](https://placehold.co/12x12/f25623/f25623.png) `#F25623`, **Sage** ![#88A57D](https://placehold.co/12x12/88a57d/88a57d.png) `#88A57D` and **Dark** ![#2A2A2A](https://placehold.co/12x12/2a2a2a/2a2a2a.png) `#2A2A2A` (default) with orange symbols.
 
 ![Cosmic-Noir folder colors](https://raw.githubusercontent.com/atraxsrc/cosmic-icon-themes/main/previews/Cosmic-Noir.png)
 
 ```bash
-./icons/install.sh                 # Orange folders
-./icons/install.sh --variant Sage  # or Dark
+./icons/install.sh                   # Dark folders
+./icons/install.sh --variant Orange  # or Sage
 ```
 
 It downloads the pack from the latest cosmic-icon-themes release, checks its SHA256,

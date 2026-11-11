@@ -72,7 +72,7 @@
     frosted_panel: true,
     frosted_applets: true,
     frosted_maximized_apps: false,
-    icon_theme: "Cosmic-Noir-Orange",
+    icon_theme: "Cosmic-Noir-Dark",
     font: (
         family: "Maple Mono Normal",
         weight: Light,
