@@ -113,6 +113,14 @@ if $ACTIVATE; then
     printf '%s' "$want" > "$SETTING"
     echo "COSMIC icon theme set to $PACK"
   fi
+  # COSMIC after 1.11.0 reads the icon theme from the theme itself, dark and light
+  for dir in "$HOME"/.config/cosmic/com.system76.CosmicTheme.{Dark,Light}{,.Builder}; do
+    latest="$(printf '%s\n' "$dir"/v[0-9]* | sort -V | tail -n 1)"
+    if [[ -f "$latest/icon_theme" && "$(cat "$latest/icon_theme")" != "$want" ]]; then
+      printf '%s' "$want" > "$latest/icon_theme"
+      echo "  ${latest#"$HOME"/.config/cosmic/}/icon_theme set to $PACK"
+    fi
+  done
   # GTK apps outside COSMIC
   if command -v gsettings >/dev/null; then
     gsettings set org.gnome.desktop.interface icon-theme "$PACK" 2>/dev/null || true
