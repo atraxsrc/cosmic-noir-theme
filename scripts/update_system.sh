@@ -56,6 +56,43 @@ fi
 
 # ── Update functions ───────────────────────────────────────────────────────────
 
+# Packages whose removal can leave an encrypted Pop!_OS install unbootable
+# (no LUKS prompt, no initramfs, no bootloader). If an upgrade wants to remove
+# any of these, the system upgrade is aborted instead of auto-confirmed.
+CRITICAL_PKGS='^(systemd|systemd-cryptsetup|systemd-boot|systemd-boot-efi|cryptsetup|cryptsetup-bin|libcryptsetup12|dracut|dracut-core|lvm2|kernelstub|linux-generic|linux-image-generic)(:amd64)?$'
+
+# Simulate the upgrade and look at what it would remove.
+#   0 = nothing removed      -> safe to run with -y
+#   1 = removals, none critical -> run interactively so you can review them
+#   2 = critical removal, or simulation failed -> abort
+# nala and apt-get share the same package state, so apt-get's simulation is a
+# close preview of what nala will do.
+check_removals() {
+    local sim removals pkg
+
+    if ! sim=$(apt-get -s dist-upgrade "${PHASED_OPT[@]}" 2>&1); then
+        print_error "Upgrade simulation failed:"
+        while IFS= read -r pkg; do print_dim "  $pkg"; done <<< "$sim"
+        return 2
+    fi
+
+    removals=$(awk '/^Remv /{print $2}' <<< "$sim")
+    if [ -z "$removals" ]; then
+        print_dim "No packages will be removed"
+        return 0
+    fi
+
+    print_warn "This upgrade wants to remove:"
+    while IFS= read -r pkg; do print_dim "  $pkg"; done <<< "$removals"
+
+    if grep -qE "$CRITICAL_PKGS" <<< "$removals"; then
+        print_error "A boot-critical package would be removed - not upgrading"
+        print_dim "Investigate with: apt-get -s dist-upgrade | grep ^Remv"
+        return 2
+    fi
+    return 1
+}
+
 update_system() {
     print_header "System Packages"
 
@@ -63,26 +100,122 @@ update_system() {
         print_dim "Including phased updates (early-adopter mode)"
     fi
 
+    # This function is called as `update_system || ...`, which switches off
+    # `set -e` inside it - so every step checks its own exit status.
+    local pm rc=0
+    local yes_opt=(-y)
+
     if command_exists nala; then
-        print_info "Package manager: nala"
-        sudo nala update
-        sudo nala upgrade --full -y "${PHASED_OPT[@]}"
-#        sudo nala autoremove -y
-        sudo nala clean
-        print_success "Nala system update complete"
-
-    elif command_exists apt; then
-        print_info "Package manager: apt (nala not found)"
-        sudo apt update
-        sudo apt full-upgrade -y "${PHASED_OPT[@]}"
-#        sudo apt autoremove -y
-        sudo apt autoclean
-        print_success "APT system update complete"
-
+        pm=nala
+    elif command_exists apt-get; then
+        pm=apt-get
     else
         print_error "No supported package manager found - skipping"
         return 1
     fi
+    print_info "Package manager: $pm"
+
+    sudo "$pm" update || { print_error "$pm update failed"; return 1; }
+
+    check_removals || rc=$?
+    case $rc in
+        0) ;;
+        1) print_warn "Removals found - confirm the upgrade yourself"
+           yes_opt=() ;;
+        *) return 1 ;;
+    esac
+
+    if [ "$pm" = nala ]; then
+        # The package lists were just refreshed above, so skip nala's own
+        # refresh when this nala version supports --no-update.
+        local nala_opt=()
+        if nala upgrade --help 2>/dev/null | grep -q -- '--no-update'; then
+            nala_opt=(--no-update)
+        fi
+        sudo nala upgrade --full "${nala_opt[@]}" "${yes_opt[@]}" "${PHASED_OPT[@]}" \
+            || { print_error "nala upgrade failed"; return 1; }
+#        sudo nala autoremove -y
+        sudo nala clean || print_warn "nala clean failed"
+    else
+        sudo apt-get dist-upgrade "${yes_opt[@]}" "${PHASED_OPT[@]}" \
+            || { print_error "apt-get dist-upgrade failed"; return 1; }
+#        sudo apt-get autoremove -y
+        sudo apt-get autoclean || print_warn "apt-get autoclean failed"
+    fi
+
+    print_success "System update complete"
+}
+
+# After any upgrade, confirm the files systemd-boot will actually load can
+# still boot this machine: both initramfs images on the ESP must contain
+# systemd-cryptsetup (or there's no LUKS prompt), and both kernels on the ESP
+# must have their modules installed (or nothing loads after root is mounted).
+# Checks that don't apply to this machine (no kernelstub, no LUKS, no dracut)
+# are skipped instead of reported as failures.
+verify_boot() {
+    print_header "Boot Check"
+
+    if ! command_exists kernelstub; then
+        print_skip "kernelstub not installed (not a Pop!_OS boot layout) - skipping"
+        return 0
+    fi
+
+    local root_uuid esp img count kern ver ok=true check_initrd=true
+
+    root_uuid=$(findmnt -no UUID /) || root_uuid=""
+    esp="/boot/efi/EFI/Pop_OS-${root_uuid}"
+
+    if [ -z "$root_uuid" ] || ! sudo test -d "$esp"; then
+        print_error "Kernelstub folder not found on the ESP: $esp"
+        print_dim "Is /boot/efi mounted? Check with: findmnt /boot/efi"
+        return 1
+    fi
+
+    # Only an encrypted install needs systemd-cryptsetup in the initramfs, and
+    # only dracut images can be listed with lsinitrd.
+    if ! sudo grep -qvE '^[[:space:]]*(#|$)' /etc/crypttab 2>/dev/null; then
+        print_skip "No LUKS volumes in /etc/crypttab - skipping initramfs check"
+        check_initrd=false
+    elif ! command_exists lsinitrd; then
+        print_skip "lsinitrd not found (initramfs not built by dracut) - skipping initramfs check"
+        check_initrd=false
+    fi
+
+    if [ "$check_initrd" = true ]; then
+        for img in initrd.img initrd.img-previous; do
+            if ! sudo test -f "$esp/$img"; then
+                print_skip "$img not present"
+                continue
+            fi
+            count=$(sudo lsinitrd "$esp/$img" 2>/dev/null | grep -c systemd-cryptsetup || true)
+            if [ "${count:-0}" -gt 0 ]; then
+                print_success "$img can unlock LUKS"
+            else
+                print_error "$img has no systemd-cryptsetup"
+                ok=false
+            fi
+        done
+    fi
+
+    if ! command_exists file; then
+        print_skip "file not installed - skipping kernel module check"
+    else
+        for kern in vmlinuz.efi vmlinuz-previous.efi; do
+            if ! sudo test -f "$esp/$kern"; then
+                print_skip "$kern not present"
+                continue
+            fi
+            ver=$(sudo file -b "$esp/$kern" | sed -n 's/.*version \([^ ,]*\).*/\1/p')
+            if [ -n "$ver" ] && [ -d "/lib/modules/$ver" ]; then
+                print_success "$kern → $ver (modules installed)"
+            else
+                print_error "$kern → ${ver:-unknown version}: no matching /lib/modules"
+                ok=false
+            fi
+        done
+    fi
+
+    [ "$ok" = true ]
 }
 
 update_flatpak() {
@@ -185,7 +318,7 @@ print_logo() {
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 main() {
-    local start_time end_time duration
+    local start_time end_time duration boot_ok=true
 
     print_logo
 
@@ -194,6 +327,10 @@ main() {
     update_system || {
         print_error "System package update failed - continuing with remaining tasks"
     }
+
+    # Always run, even after a failed upgrade: a half-finished upgrade is
+    # exactly when the boot files are most likely to be broken.
+    verify_boot || boot_ok=false
 
     update_flatpak
 #    update_snap
@@ -205,6 +342,10 @@ main() {
     echo -e "${EDGE}${BOLD}└─ All done ${DIM}──────────────────────────────────${RESET}"
     printf "   ${HIGH}✓ Completed in ${BOLD}%dm %ds${RESET}\n" \
         $((duration / 60)) $((duration % 60))
+    if [ "$boot_ok" = false ]; then
+        echo
+        print_error "${BOLD}Boot check failed - do NOT reboot until it's fixed"
+    fi
     echo
 }
 
