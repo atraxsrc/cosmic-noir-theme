@@ -66,7 +66,7 @@
     frosted: Low,
     gaps: (0, 4),
     active_hint: 1,
-    window_hint: Some("#F25623FF"),
+    window_hint: None,
     frosted_windows: true,
     frosted_system_interface: true,
     frosted_panel: true,
